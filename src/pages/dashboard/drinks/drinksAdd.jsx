@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, Typography,Input } from "@material-tailwind/react";
+import { Button, Card, CardBody, Typography,Input,Label } from "@material-tailwind/react";
 import * as Yup from "yup";
 import { Divider, FormGroup, Grid } from "@mui/material";
 import { FastField, Field, Form, Formik } from "formik";
@@ -42,7 +42,7 @@ function MovieAdd() {
     trailerURL: "", 
     language: "", 
     rated: "", 
-    isShowing: 1, 
+    isShowing: 0, 
   };
 
 
@@ -63,7 +63,7 @@ function MovieAdd() {
       trailerURL: value.trailerURL, 
       language: value.language, 
       rated: value.rated,  
-     isShowing: 1, 
+     isShowing: value.isShowing, 
     };
     console.log('after release', reContructValue);
        addMovie(reContructValue);
@@ -113,16 +113,24 @@ function MovieAdd() {
                 <Card>
                   <CardBody>
                     <Grid item xs={12} md={12}>
+                     
+                        
+
                       <div className="h-[300px] w-full">
+                      
                         <img
                           alt="image not found"
                           src={smallImage == null ? `/src/assets/icon/NoImage.jpg` : smallImage}
                           className="h-full w-full rounded-l  g object-contain border-4 border-indigo-600 rounded-lg border-red-600"
-                        />
+                          />
+                        
                         </div>
+                   
+                     
                     </Grid>
                     <Grid item xs={12} md={12}>
                       <FormGroup>
+                         <label >Small Image:</label>
                          <Input type="file" name='fileSmallImage' onChange={handleSmallImage} />
                       </FormGroup>
                     </Grid>
@@ -209,7 +217,8 @@ function MovieAdd() {
                       </div>
                     </Grid>
                     <Grid item xs={12} md={12}>
-                      <FormGroup>
+                        <FormGroup>
+                        <label >Large Image:</label>
                          <Input type="file" name='fileLargeImage' onChange={handleLargeImage} />
                       </FormGroup>
                       </Grid>

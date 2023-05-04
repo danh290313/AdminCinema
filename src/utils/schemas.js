@@ -40,9 +40,17 @@ const ratio = Yup.string().required("This field is required");
 const uom = Yup.string().required("This field is required");
 const duration = Yup.number().required("This field is required");
 export const staffSchema = Yup.object().shape({
-  phone_number: phoneNumber,
   name,
-  //birthday,
+  birthday: dob,
+  phoneNumber,
+  address,
+ 
+});
+
+export const staffSchema2 = Yup.object().shape({
+  name,
+  birthday: dob,
+  phone_number: phoneNumber,
   address,
  
 });

@@ -16,7 +16,7 @@ import DatePickerField from "@/components/custom-fields/DatePickerField/DatePick
 import InputField from "@/components/custom-fields/InputField";
 import SwitchField from "@/components/custom-fields/SwitchField/SwitchField";
 import { useNavigate, useParams } from "react-router-dom";
-import { staffSchema } from "@/utils/schemas";
+import { staffSchema2 } from "@/utils/schemas";
 import useBranch from "@/hooks/useBranch";
 import { forwardRef, useEffect, useState } from "react";
 import useStaff from "@/hooks/useStaff";
@@ -42,14 +42,6 @@ function StaffEdit() {
    
   }, []);
 
-  // const formatDate = (dateString) => {
-  //   const dateParts = dateString.split("/");
-  //   const year = dateParts[2];
-  //   const month = dateParts[1];
-  //   const day = dateParts[0];
-  //   const formattedDate = `${year}-${month}-${day}`;
-  //   return formattedDate;
-  // }
 
   const initialValues = {
     id: id,
@@ -58,35 +50,21 @@ function StaffEdit() {
     phone_number: staff?.phone_number,
     address: staff?.address,
   }
-  
 
-
- 
-  const handleClose = () => setOpen(false);
   const handleSubmit = (valSubmit) => {
-  
-    setValue(valSubmit);
-    setOpen(true);
-    //   if (initialValues.active != reContructVal.active) {
-    //     setOpen(true);
-    //   } else {
-    //     editStaff(id, reContructVal);
-    //     (async () => {
-    //       const res = await getStaff(id);
-    //       setStaff(res);
-    //     })();
-    //     nav("/dashboard/staff");
-    //   }
-     };
+   
     const handleOK = () => {
-      editStaff(id, value);
+      editStaff(id, valSubmit);
       (async () => {
         const res = await getStaff(id);
         setStaff(res);
       })();
       nav("/dashboard/staff");
-  };
-
+     
+    };
+    handleOK();
+     };
+   
 
     return (
       staff &&
@@ -97,7 +75,7 @@ function StaffEdit() {
             <CardBody>
               <Formik
                 initialValues={initialValues}
-                validationSchema={staffSchema}
+                validationSchema={staffSchema2}
                 onSubmit={handleSubmit}
                 validateOnBlur={true}
               >
@@ -252,12 +230,7 @@ function StaffEdit() {
               </Formik>
             </CardBody>
           </Card>
-          <ConfirmDialog
-            title={"Staff updated successfully"}
-            handleClose={handleClose}
-            open={open}
-            handleOK={handleOK}
-          />
+       
         </div>
       )
     );

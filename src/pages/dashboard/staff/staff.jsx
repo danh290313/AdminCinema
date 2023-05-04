@@ -172,12 +172,6 @@ export function Staff() {
 
                           </Link> */}
 
-                          <Link to={`edituser/${id}`}>
-                            <Tooltip content="AddUser">
-                              <UserIcon className="h-9 w-5 cursor-pointer text-light-blue-600" />
-                            </Tooltip>
-                          </Link>
-
                           <Link to={`${id}`}>
                             <Tooltip content="Edit">
                               <PencilSquareIcon className="h-9 w-5 cursor-pointer text-light-blue-600" />

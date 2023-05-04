@@ -50,7 +50,7 @@ function StaffAdd() {
           <CardBody>
             <Formik
               initialValues={initialValues}
-             validationSchema={validationShema}
+              validationSchema={validationShema}
               onSubmit={handleSubmit}
               validateOnBlur={true}
             >
