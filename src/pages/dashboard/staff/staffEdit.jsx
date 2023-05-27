@@ -124,73 +124,7 @@ function StaffEdit() {
                               />
                             </FormGroup>
                           </Grid>
-                          {/* <Grid item xs={12} md={6}>
-                          <FormGroup>
-                            <Field
-                              name="gender"
-                              component={SelectField}
-                              label="Gender"
-                              options={[
-                                { id: 0, value: "Nam" },
-                                { id: 1, value: "Nữ" },
-                              ]}
-                              defaultOp="Choose gender"
-                            />
-                          </FormGroup>
-                        </Grid> */}
-                      
-                          {/* <Grid item xs={12} md={6}>
-                          <FormGroup>
-                            <Field
-                              name="hometown"
-                              component={InputField}
-                              label="Home Town"
-                            />
-                          </FormGroup>
-                        </Grid> */}
-                       
-
-                          {/* <Grid item xs={12} md={6}>
-                          <FormGroup>
-                            <Field
-                              name="branch"
-                              component={SelectField}
-                              value="value"
-                              label="Branch"
-                              options={branch.data.map((v) => ({
-                                id: v.id,
-                                value: v.name,
-                              }))}
-                              defaultOp="Choose branch"
-                            />
-                          </FormGroup>
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                          <FormGroup>
-                            <Field
-                              name="position"
-                              component={SelectField}
-                              value="value"
-                              label="Position"
-                              options={positions.map((v) => ({
-                                id: v.id,
-                                value: v.name,
-                              }))}
-                              defaultOp="Choose position"
-                            />
-                          </FormGroup>
-                        </Grid>
-
-                        <Grid item xs={12} md={6}>
-                          <FormGroup>
-                            <Field
-                              name="active"
-                              component={SwitchField}
-                              label="active"
-                              // confirm={"Deactive this staff ?"}
-                            />
-                          </FormGroup>
-                        </Grid> */}
+                          
                         </Grid>
                         
                         

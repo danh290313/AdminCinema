@@ -24,10 +24,9 @@ import {
 } from "@/pages/dashboard/customer";
 
 import {
-  Drinks,
-  DrinksEdit,
-  DrinksAdd,
-} from "./pages/dashboard/drinks";
+  Movie,
+  MovieAdd,
+} from "./pages/dashboard/movie";
 
 import { BuildingStorefrontIcon } from "@heroicons/react/24/solid";
 
@@ -86,22 +85,17 @@ export const routes = [
         element: <Customer />,
       },
 
-     
-      {
-        notOnSidebar: true,
-        path: "/movie/:id",
-        element: <DrinksEdit />,
-      },
+    
       {
         icon: <BeakerIcon {...icon} />,
         name: "movie",
         path: "/movie",
-        element: <Drinks />,
+        element: <Movie />,
       },
       {
         notOnSidebar: true,
         path: "/movie/add",
-        element: <DrinksAdd />,
+        element: <MovieAdd />,
       },
 
       
